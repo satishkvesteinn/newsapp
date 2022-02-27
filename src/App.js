@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+timport React, { useState } from 'react'
 import {Route,Routes,} from "react-router-dom";
 import Navbar from './components/Navbar'
 import Business from './pages/Business'
@@ -29,12 +29,12 @@ function App() {
       />
       <Navbar />
       <Routes>
-        <Route path="/" element={<General seProgress={handleProgress} category="general" pagesize= {pagesize} />}></Route>
-        <Route path="/health" element={<Health seProgress={handleProgress} category="health" pagesize= {pagesize} />}></Route>
-        <Route path="/sports" element={<Sports seProgress={handleProgress} category="sports" pagesize= {pagesize} />}></Route>
-        <Route path="/technology" element={<Technology seProgress={handleProgress} category="technology" pagesize= {pagesize} />}></Route>
-        <Route path="/entertainment" element={<Entertainment seProgress={handleProgress} category="entertainment" pagesize= {pagesize} />}></Route>
-        <Route path="/business" element={<Business seProgress={handleProgress} category="business" pagesize= {pagesize} />}></Route>
+        <Route exact path="/" element={<General seProgress={handleProgress} category="general" pagesize= {pagesize} />}></Route>
+        <Route exact path="/health" element={<Health seProgress={handleProgress} category="health" pagesize= {pagesize} />}></Route>
+        <Route exact path="/sports" element={<Sports seProgress={handleProgress} category="sports" pagesize= {pagesize} />}></Route>
+        <Route exact path="/technology" element={<Technology seProgress={handleProgress} category="technology" pagesize= {pagesize} />}></Route>
+        <Route exact path="/entertainment" element={<Entertainment seProgress={handleProgress} category="entertainment" pagesize= {pagesize} />}></Route>
+        <Route exact path="/business" element={<Business seProgress={handleProgress} category="business" pagesize= {pagesize} />}></Route>
         <Route path="/science" element={<Science seProgress={handleProgress} category="science" pagesize= {pagesize} />}></Route>
       </Routes>
       <Footer/>
