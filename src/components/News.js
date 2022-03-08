@@ -28,7 +28,7 @@ function News(props) {
         // setting value of top loading bar
         props.set(10)
         // fetching data on server
-        const fechingResponse = await fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&country=in&apiKey=491335e4b70746408a9da689c10181ea&pagesize=${props.pagesize}&page=${page}`);
+        const fechingResponse = await fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&country=in&apiKey=your_API_key&pagesize=${props.pagesize}&page=${page}`);
         // setting value of top loading bar
         props.set(40)
         // request for json file
@@ -67,7 +67,7 @@ function News(props) {
         // set loading spinner value id true
         setLoading(true)
         // fetching more data from news server
-        const fechingResponse = await fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&country=in&apiKey=491335e4b70746408a9da689c10181ea&pagesize=${props.pagesize}&page=${page + 1}`);
+        const fechingResponse = await fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&country=in&apiKey=your_API_key&pagesize=${props.pagesize}&page=${page + 1}`);
         const responce = await fechingResponse.json();
         setItems(items.concat(responce.articles))
         setTotalResults(responce.totalResults)
