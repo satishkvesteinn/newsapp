@@ -27,6 +27,7 @@ function News(props) {
         setCategory(props.category)
         // setting value of top loading bar
         props.set(10)
+        // generate your api key on https://newsapi.org
         // fetching data on server
         const fechingResponse = await fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&country=in&apiKey=your_API_key&pagesize=${props.pagesize}&page=${page}`);
         // setting value of top loading bar
@@ -66,6 +67,7 @@ function News(props) {
         setPage(page + 1)
         // set loading spinner value id true
         setLoading(true)
+        // generate your api key on https://newsapi.org
         // fetching more data from news server
         const fechingResponse = await fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&country=in&apiKey=your_API_key&pagesize=${props.pagesize}&page=${page + 1}`);
         const responce = await fechingResponse.json();
